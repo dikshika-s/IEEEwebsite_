@@ -4,6 +4,8 @@
 <head>
 
 	<title>IEEE | IIT Mandi</title>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	<link rel="icon" href="img/Blog_Pic.jpg" type="image">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,37 +16,36 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="./resize-dimension.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 
 	<script>
-		jQuery(document).ready(function() {
+		jQuery(document).ready(function () {
 			var $window = $(window);
 			var lastWindowWidth = $window.width();
-			$window.resize(function (){
+			$window.resize(function () {
 				var windowWidth = $window.width();
-				if (lastWindowWidth !== windowWidth)
-				{
+				if (lastWindowWidth !== windowWidth) {
 					lastWindowWidth = windowWidth;
 				}
-				setTimeout(function(){
+				setTimeout(function () {
 					location.reload();
 					console.log("delay");
- 				 }, 100);
+				}, 100);
 			});
 
 
-			if(lastWindowWidth < 1000){
-				jQuery('.carousel[data-type=""] .item').each(function(){
+			if (lastWindowWidth < 1000) {
+				jQuery('.carousel[data-type=""] .item').each(function () {
 					var next = jQuery(this).next();
 					if (!next.length) {
 						next = jQuery(this).siblings(':first');
 					}
 					next.children(':first-child').clone().appendTo(jQuery(this));
 
-					for (var i=0;i<2;i++) {
-						next=next.next();
+					for (var i = 0; i < 2; i++) {
+						next = next.next();
 						if (!next.length) {
 							next = jQuery(this).siblings(':first');
 						}
@@ -52,16 +53,16 @@
 					}
 				});
 			}
-			else{
-				jQuery('.carousel[data-type="multi"] .item').each(function(){
+			else {
+				jQuery('.carousel[data-type="multi"] .item').each(function () {
 					var next = jQuery(this).next();
 					if (!next.length) {
 						next = jQuery(this).siblings(':first');
 					}
 					next.children(':first-child').clone().appendTo(jQuery(this));
 
-					for (var i=0;i<2;i++) {
-						next=next.next();
+					for (var i = 0; i < 2; i++) {
+						next = next.next();
 						if (!next.length) {
 							next = jQuery(this).siblings(':first');
 						}
@@ -73,16 +74,14 @@
 	</script>
 
 	<style type="text/css">
-		
-		#membershere i{
+		#membershere i {
 			font-size: 24px;
 			transition: .4s;
 		}
 
-		#membershere i:hover{
-			font-size: 26px!important;
+		#membershere i:hover {
+			font-size: 26px !important;
 		}
-
 	</style>
 </head>
 
@@ -98,7 +97,8 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#myPage">
-					<img src="img/ieee_logo.png" alt="Logo" style="height: 44px; transform: translate(0px,-10px);" id="logo">
+					<img src="img/ieee_logo.png" alt="Logo" style="height: 44px; transform: translate(0px,-10px);"
+						id="logo">
 				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -292,20 +292,29 @@
 			<div class="row">
 				<div class="col-sm-7">
 
-					<img src="img/ieee_logo.png" alt="Logo" class="img-responsive" style="width: 550px;" id="about-us-logo">
+					<img src="img/ieee_logo.png" alt="Logo" class="img-responsive" style="width: 550px;"
+						id="about-us-logo">
 				</div>
 				<div class="col-sm-5" style="text-align: justify;">
-					<p> IEEE IIT Mandi is a student chapter of the Institute of Electrical and Electronics Engineers (IEEE). We are a
-						student-run organization at the IIT Mandi, our motives are to find ourselves and our passions, to have fun and
-						meet new people, gather new experiences, to learn industrial skills to enhance ourselves, to learn about research
+					<p> IEEE IIT Mandi is a student chapter of the Institute of Electrical and Electronics Engineers
+						(IEEE). We are a
+						student-run organization at the IIT Mandi, our motives are to find ourselves and our passions,
+						to have fun and
+						meet new people, gather new experiences, to learn industrial skills to enhance ourselves, to
+						learn about research
 						and innovation in technology, to help our community and to get inspired to change the world!</p>
 					<h3> What is IEEE? </h3>
 
-					<p>The Institute of Electrical and Electronics Engineers, or IEEE, is a technical professional organisation. While
-						it has electrical and electronics engineering at its core, it’s composed of engineers, scientists and other
-						professionals, who have interests in electrical and computer sciences, engineering, and varied, but related
-						disciplines. It’s dedicated to fostering technological innovation and excellence for the benefit of humanity. It
-						does so by sponsoring conferences, publishing transactions, journals, and magazines, developing standards, and
+					<p>The Institute of Electrical and Electronics Engineers, or IEEE, is a technical professional
+						organisation. While
+						it has electrical and electronics engineering at its core, it’s composed of engineers,
+						scientists and other
+						professionals, who have interests in electrical and computer sciences, engineering, and varied,
+						but related
+						disciplines. It’s dedicated to fostering technological innovation and excellence for the benefit
+						of humanity. It
+						does so by sponsoring conferences, publishing transactions, journals, and magazines, developing
+						standards, and
 						through its educational programs. It’s the largest professional association in the world !</p>
 				</div>
 			</div>
@@ -321,7 +330,8 @@
 	<br>
 	<div class="container-fluid quotes">
 		<div id="text-carousel" class="carousel slide" data-ride="carousel">
-			<i class="fas fa-quote-left" style="color: white; margin-left: 20%; font-size: 70px; opacity: 0.5; position: absolute;"></i>
+			<i class="fas fa-quote-left"
+				style="color: white; margin-left: 20%; font-size: 70px; opacity: 0.5; position: absolute;"></i>
 			<!-- Wrapper for slides -->
 			<div class="row">
 
@@ -330,10 +340,13 @@
 						<div class="item active ">
 							<div class="carousel-content">
 								<div>
-									<p style="color:black;">Science means constantly walking a tightrope between blind faith and curiosity;
+									<p style="color:black;">Science means constantly walking a tightrope between blind
+										faith and curiosity;
 										between expertise and
-										creativity; between bias and openness; between experience and epiphany; between ambition and passion; and
-										between arrogance and conviction - in short, between an old today and a new tomorrow.</p>
+										creativity; between bias and openness; between experience and epiphany; between
+										ambition and passion; and
+										between arrogance and conviction - in short, between an old today and a new
+										tomorrow.</p>
 									<h4>-Stephen Jay Gould</h4>
 								</div>
 							</div>
@@ -341,8 +354,10 @@
 						<div class="item">
 							<div class="carousel-content">
 								<div>
-									<p style="color:black;">We will always have STEM with us. Some things will drop out of the public eye and will
-										go away, but there will always be science, engineering, and technology. And there will always, always be
+									<p style="color:black;">We will always have STEM with us. Some things will drop out
+										of the public eye and will
+										go away, but there will always be science, engineering, and technology. And
+										there will always, always be
 										mathematics.</p>
 									<h4>-Katherine Johnson</h4>
 								</div>
@@ -351,7 +366,8 @@
 						<div class="item">
 							<div class="carousel-content">
 								<div>
-									<p style="color:black;">Science is the acceptance of what works and the rejection of what does not. That needs
+									<p style="color:black;">Science is the acceptance of what works and the rejection of
+										what does not. That needs
 										more courage than we might think.</p>
 									<h4>-Jacob Bronowski</h4>
 								</div>
@@ -360,8 +376,10 @@
 						<div class="item">
 							<div class="carousel-content">
 								<div>
-									<p style="color:black;">We pass through this world but once. Few tragedies can be more extensive than the
-										stunting of life, few injustices deeper than the denial of an opportunity to strive or even to hope, by a
+									<p style="color:black;">We pass through this world but once. Few tragedies can be
+										more extensive than the
+										stunting of life, few injustices deeper than the denial of an opportunity to
+										strive or even to hope, by a
 										limit imposed from without, but falsely identified as lying within.</p>
 									<h4>-Stephen Jay Gould</h4>
 								</div>
@@ -395,10 +413,14 @@
 
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-				<p style="text-align: justify;">The <strong>IEEE Industry Applications Society</strong> is the society of IEEE that
-					concerns itself with advancements, theoretical and practical, in electrical and electronic engineering, applied to
-					industry and commerce. Along with that, it addresses energy conservation practices, and creation of industrial
-					engineering standards. It organises conferences, and events to disseminate technical information to its members,
+				<p style="text-align: justify;">The <strong>IEEE Industry Applications Society</strong> is the society
+					of IEEE that
+					concerns itself with advancements, theoretical and practical, in electrical and electronic
+					engineering, applied to
+					industry and commerce. Along with that, it addresses energy conservation practices, and creation of
+					industrial
+					engineering standards. It organises conferences, and events to disseminate technical information to
+					its members,
 					and keep them updated on developments in the field.</p>
 			</div>
 		</div>
@@ -411,10 +433,14 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<p style="text-align: justify;">The <strong>IEEE Robotics and Automation Society's</strong> has ‘scientific,
-					literary and educational endeavours. It seeks advancements in fundamental and applied research in robotics and
-					automation engineering and science. That means, it supports research into intelligent and adaptable systems in
-					unstructured environments, and efficiency and reliability of systems in structured environments, among other
+				<p style="text-align: justify;">The <strong>IEEE Robotics and Automation Society's</strong> has
+					‘scientific,
+					literary and educational endeavours. It seeks advancements in fundamental and applied research in
+					robotics and
+					automation engineering and science. That means, it supports research into intelligent and adaptable
+					systems in
+					unstructured environments, and efficiency and reliability of systems in structured environments,
+					among other
 					things.</p>
 			</div>
 		</div>
@@ -426,10 +452,14 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<p style="text-align: justify;">The <strong>IEEE Industrial Electronics Society</strong> undertakes technical
-					activities that address advancements in industrial and manufacturing processes through electronics and engineering
-					sciences - for example, the application of intelligent and computer control systems, robotics, data acquisition
-					and signal processing, power electronics etc. to better manufacturing processes. IES has its roots in IRS, which
+				<p style="text-align: justify;">The <strong>IEEE Industrial Electronics Society</strong> undertakes
+					technical
+					activities that address advancements in industrial and manufacturing processes through electronics
+					and engineering
+					sciences - for example, the application of intelligent and computer control systems, robotics, data
+					acquisition
+					and signal processing, power electronics etc. to better manufacturing processes. IES has its roots
+					in IRS, which
 					was one of the two original societies whose merger led to the formation of IEEE.</p>
 			</div>
 		</div>
@@ -441,10 +471,14 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-				<p style="text-align: justify;">The <strong>IEEE Women in Engineering</strong>(WIE) is the society of IEEE that
-					concerns with the women related to IEEE. It is one of the largest international organizations dedicated to
-					promoting women engineers and scientists, it's motive is to inspiring girls around the globe to follow their
-					academic interests in a career.<br><br><span style="color: #701c8c">Soon to be established.</span></p>
+				<p style="text-align: justify;">The <strong>IEEE Women in Engineering</strong>(WIE) is the society of
+					IEEE that
+					concerns with the women related to IEEE. It is one of the largest international organizations
+					dedicated to
+					promoting women engineers and scientists, it's motive is to inspiring girls around the globe to
+					follow their
+					academic interests in a career.<br><br><span style="color: #701c8c">Soon to be established.</span>
+				</p>
 			</div>
 		</div>
 		<br>
@@ -463,7 +497,8 @@
 			<div class="row">
 				<div class="container_image">
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<a href="https://ieee-collabratec.ieee.org/" target="_blank"><img src="img/ieeecollaboratec.png" width="70%"></a>
+						<a href="https://ieee-collabratec.ieee.org/" target="_blank"><img src="img/ieeecollaboratec.png"
+								width="70%"></a>
 					</div>
 				</div>
 				<div class="container_image">
@@ -478,12 +513,14 @@
 				</div>
 				<div class="container_image">
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<a href="http://sites.ieee.org/vtools/" target="_blank"> <img src="img/ieeevtools.png" width="50%"></a>
+						<a href="http://sites.ieee.org/vtools/" target="_blank"> <img src="img/ieeevtools.png"
+								width="50%"></a>
 					</div>
 				</div>
 				<div class="container_image">
 					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"> <img src="img/ieeeXplore.png" width="80%"></a>
+						<a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"> <img
+								src="img/ieeeXplore.png" width="80%"></a>
 					</div>
 				</div>
 
@@ -504,7 +541,7 @@
 			</div>
 			<br>
 			<div class="row slideanim">
-				
+
 				<div class="col-sm-12">
 					<a href="upcomingEvents.html" target="_blank" style="color: white; text-decoration: none;">
 						<span class="fas fa-calendar-week logo-small"></span>
@@ -512,7 +549,7 @@
 						<p style="transform: translate(0px,-10px);">Click to learn more.</p>
 					</a>
 				</div>
-				
+
 			</div>
 			<br>
 			<div class="row slideanim">
@@ -542,8 +579,8 @@
 				</div>
 			</div>
 		</div>
-			<br><br>
-		</div>
+		<br><br>
+	</div>
 	</div>
 	<!-- EVENTS END -->
 
@@ -558,14 +595,19 @@
 		<br>
 		<div class="container text-center" id="members_here">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="img/Council/Dileep_AD.jpg" class="img-circle person" width="50%">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="img/Council/Dileep_AD.jpg"
+						class="img-circle person" width="50%">
 					<p><strong>Dr. Dileep A. D.</strong></p>
 					<div style="line-height: 90%">
 						<p>Branch Advisor</p>
 						<p> IEEE IIT Mandi Student Branch </p>
-						<a href="mailto:addileep@iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/dileep.aroordinesh" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>					</div>
-					<hr style="width: 42%;border-color:gray"></div>
+						<a href="mailto:addileep@iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/dileep.aroordinesh" target="_blank"><i class="fab fa-facebook"
+								style="color: #3B5998"></i></a>
+					</div>
+					<hr style="width: 42%;border-color:gray">
+				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 					<img src="img/Council/Ankush_sir.jpeg" class="img-circle person" width="50%">
@@ -573,8 +615,10 @@
 					<div style="line-height: 90%">
 						<p>Branch Counselor</p>
 						<p> IEEE IIT Mandi Student Branch </p>
-						<a href="mailto:ankushbag@iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.linkedin.com/in/ankush-bag-43477644/" target="_blank"><i class="fab" style="font-size: 24px">&#xf08c;&nbsp</i></a>
+						<a href="mailto:ankushbag@iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.linkedin.com/in/ankush-bag-43477644/" target="_blank"><i class="fab"
+								style="font-size: 24px">&#xf08c;&nbsp</i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -599,8 +643,10 @@
 					<div style="line-height: 90%">
 						<p>Branch Counselor</p>
 						<p>RAS Student Branch </p>
-						<a href="mailto:hitesh@iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.linkedin.com/in/hitesh-shrimali-56183b19/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>
+						<a href="mailto:hitesh@iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.linkedin.com/in/hitesh-shrimali-56183b19/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -623,9 +669,12 @@
 					<div style="line-height: 90%">
 						<p>Chairperson</p>
 						<p>Student Branch </p>
-						<a href="https://www.linkedin.com/in/piyushanand98/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b15226@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/piyush.anand.39" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/piyushanand98/" target="_blank"><i class="fab fa-linkedin"
+								style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b15226@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/piyush.anand.39" target="_blank"><i class="fab fa-facebook"
+								style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -636,9 +685,12 @@
 					<div style="line-height: 90%">
 						<p>Chairperson</p>
 						<p>RAS Student Branch </p>
-						<a href="https://www.linkedin.com/in/virendrasingh-suryavanshi-47460498/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b16037@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/virendrasingh.suryavanshi.1" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/virendrasingh-suryavanshi-47460498/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b16037@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/virendrasingh.suryavanshi.1" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -649,9 +701,12 @@
 					<div style="line-height: 90%">
 						<p>Chairperson</p>
 						<p>IAS Student Branch </p>
-						<a href="https://www.linkedin.com/in/rajesh-pindoriya-97261518/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:rajeshpindoriya@ieee.org"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/rajesh.pindoriya.1" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/rajesh-pindoriya-97261518/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:rajeshpindoriya@ieee.org"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/rajesh.pindoriya.1" target="_blank"><i class="fab fa-facebook"
+								style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -664,8 +719,10 @@
 					<div style="line-height: 90%">
 						<p>Vice Chairperson</p>
 						<p>Student Branch </p>
-						<a href="mailto:b15223@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.linkedin.com/in/munishkr95/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>
+						<a href="mailto:b15223@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.linkedin.com/in/munishkr95/" target="_blank"><i class="fab fa-linkedin"
+								style="color: #4875B4;"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -676,9 +733,12 @@
 					<div style="line-height: 90%">
 						<p>Vice Chairperson</p>
 						<p>RAS Student Branch </p>
-						<a href="https://www.linkedin.com/in/kushagra888/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b15319@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/kushagra.singhal.16" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/kushagra888/" target="_blank"><i class="fab fa-linkedin"
+								style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b15319@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/kushagra.singhal.16" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -689,8 +749,10 @@
 					<div style="line-height: 90%">
 						<p>Vice Chairperson</p>
 						<p>IAS Student Branch </p>
-						<a href="mailto:sachin.chauhan204pro@gmail.com"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/sachin.chauhan.790256" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="mailto:sachin.chauhan204pro@gmail.com"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/sachin.chauhan.790256" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -703,9 +765,12 @@
 					<div style="line-height: 90%">
 						<p>Secretary</p>
 						<p>Student Branch </p>
-						<a href="https://www.linkedin.com/in/pankaj-upadhyay-a10b41104/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b15323@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/pnkj.slr7" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/pankaj-upadhyay-a10b41104/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b15323@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/pnkj.slr7" target="_blank"><i class="fab fa-facebook"
+								style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -716,9 +781,12 @@
 					<div style="line-height: 90%">
 						<p>Secretary</p>
 						<p>RAS Student Branch </p>
-						<a href="https://www.linkedin.com/in/atyant-yadav-502798147/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b17037@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/atyant.30" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/atyant-yadav-502798147/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b17037@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/atyant.30" target="_blank"><i class="fab fa-facebook"
+								style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -729,8 +797,10 @@
 					<div style="line-height: 90%">
 						<p>Secretary</p>
 						<p>IAS Student Branch </p>
-						<a href="mailto:T18068@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/profile.php?id=100004883327210" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="mailto:T18068@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/profile.php?id=100004883327210" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -743,8 +813,10 @@
 					<div style="line-height: 90%">
 						<p>Treasurer</p>
 						<p>Student Branch </p>
-						<a href="mailto:T18081@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/profile.php?id=100008808974220" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="mailto:T18081@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/profile.php?id=100008808974220" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 						<br>
 					</div>
 					<hr style="width: 42%;border-color:gray">
@@ -757,9 +829,12 @@
 						<p>Treasurer</p>
 						<p>RAS Student Branch </p>
 						<p>Web Developer </p>
-						<a href="https://www.linkedin.com/in/neeraj-sharma-93895a14a/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b17050@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/profile.php?id=100009505387539" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/neeraj-sharma-93895a14a/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b17050@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/profile.php?id=100009505387539" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 					</div>
 					<hr style="width: 42%;border-color:gray">
 				</div>
@@ -770,9 +845,12 @@
 					<div style="line-height: 90%">
 						<p>Finance Head</p>
 						<p>Student Branch </p>
-						<a href="https://www.linkedin.com/in/aditi-mann-180a14105/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b15205@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/profile.php?id=100010180416490" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/aditi-mann-180a14105/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b15205@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/profile.php?id=100010180416490" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 						<br>
 					</div>
 					<hr style="width: 42%;border-color:gray">
@@ -785,9 +863,12 @@
 					<p><strong> Jhalak Choudhary </strong></p>
 					<div style="line-height: 90%">
 						<p>Web Developer</p>
-						<a href="https://www.linkedin.com/in/jhalak-choudhary-75921716b/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b17046@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/jhalak.choudhary.92" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/jhalak-choudhary-75921716b/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b17046@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/jhalak.choudhary.92" target="_blank"><i
+								class="fab fa-facebook" style="color: #3B5998"></i></a>
 						<br>
 					</div>
 				</div>
@@ -797,9 +878,12 @@
 					<p><strong> Utkarsh Jain </strong></p>
 					<div style="line-height: 90%">
 						<p>Web Developer </p>
-						<a href="https://www.linkedin.com/in/utkarsh-jain-3a71a6154/" target="_blank"><i class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
-						<a href="mailto:b17029@students.iitmandi.ac.in"><i class="fas fa-envelope" style="color: #4875B4"></i></a>&nbsp
-						<a href="https://www.facebook.com/utkarsh.jain.376" target="_blank"><i class="fab fa-facebook" style="color: #3B5998"></i></a>
+						<a href="https://www.linkedin.com/in/utkarsh-jain-3a71a6154/" target="_blank"><i
+								class="fab fa-linkedin" style="color: #4875B4;"></i></a>&nbsp
+						<a href="mailto:b17029@students.iitmandi.ac.in"><i class="fas fa-envelope"
+								style="color: #4875B4"></i></a>&nbsp
+						<a href="https://www.facebook.com/utkarsh.jain.376" target="_blank"><i class="fab fa-facebook"
+								style="color: #3B5998"></i></a>
 					</div>
 				</div>
 			</div>
@@ -819,44 +903,54 @@
 			<br>
 			<!--The main div for carousel-->
 			<div class="container text-center" style="transform: translate(0px,-10px); ">
-				<div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="2000" id="fruitscarousel">
+				<div class="carousel slide row" data-ride="carousel" data-type="multi" data-interval="2000"
+					id="fruitscarousel">
 					<div class="nospace">
 						<div class="carousel-inner">
 							<div class="item active">
-								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="img/27th March_Prof. PC Deshmukh Talk/thumbnail (6).jpg"><img
-										 src="img/27th March_Prof. PC Deshmukh Talk/thumbnail (6).jpg" class="img-responsive"></a>
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a
+										href="img/27th March_Prof. PC Deshmukh Talk/thumbnail (6).jpg"><img
+											src="img/27th March_Prof. PC Deshmukh Talk/thumbnail (6).jpg"
+											class="img-responsive"></a>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08028.JPG"><img
-										 src="img/Home_page/DSC08028.jpg" class="img-responsive"></a>
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a
+										href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08028.JPG"><img
+											src="img/Home_page/DSC08028.jpg" class="img-responsive"></a>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="img/30th March_Prof Raghava/IMG_20180330_121414.jpg"><img
-										 src="img/Home_page/IMG_20180330_121414.jpg" class="img-responsive"></a>
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a
+										href="img/30th March_Prof Raghava/IMG_20180330_121414.jpg"><img
+											src="img/Home_page/IMG_20180330_121414.jpg" class="img-responsive"></a>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08052.JPG"><img
-										 src="img/Home_page/DSC08052.jpg" class="img-responsive"></a>
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a
+										href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08052.JPG"><img
+											src="img/Home_page/DSC08052.jpg" class="img-responsive"></a>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08009.JPG"><img
-										 src="img/Home_page/DSC08009.jpg" class="img-responsive"></a>
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a
+										href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08009.JPG"><img
+											src="img/Home_page/DSC08009.jpg" class="img-responsive"></a>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08057.JPG"><img
-										 src="img/Home_page/DSC08057.jpg" class="img-responsive"></a>
+								<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><a
+										href="img/Palampur College Trip to IIT Mandi Electrical Labs_26th March 2018/DSC08057.JPG"><img
+											src="img/Home_page/DSC08057.jpg" class="img-responsive"></a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<a class="left carousel-control" href="#fruitscarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-					<a class="right carousel-control" href="#fruitscarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+					<a class="left carousel-control" href="#fruitscarousel" data-slide="prev"><i
+							class="glyphicon glyphicon-chevron-left"></i></a>
+					<a class="right carousel-control" href="#fruitscarousel" data-slide="next"><i
+							class="glyphicon glyphicon-chevron-right"></i></a>
 
 				</div>
 			</div>
@@ -883,22 +977,27 @@
 			<div class="row">
 				<div class="col-md-5" style="transform: translate(-10px,0px);">
 					<p><strong>Query? Drop a note.</strong></p>
-					<p><span class="glyphicon glyphicon-map-marker"></span> Indian Institute of Technology Mandi, Kamand (H.P.) -
+					<p><span class="glyphicon glyphicon-map-marker"></span> Indian Institute of Technology Mandi, Kamand
+						(H.P.) -
 						175005</p>
-					<p><span class="glyphicon glyphicon-envelope"></span> Email: ieeesciitmandi@students.iitmandi.ac.in</p>
+					<p><span class="glyphicon glyphicon-envelope"></span> Email: ieeesciitmandi@students.iitmandi.ac.in
+					</p>
 
 				</div>
 				<form action="mail.php" method="POST">
 					<div class="col-md-7" style="transform: translate(10px,0px);">
 						<div class="row">
 							<div class="col-sm-6 form-group">
-								<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+								<input class="form-control" id="name" name="name" placeholder="Name" type="text"
+									required>
 							</div>
 							<div class="col-sm-6 form-group">
-								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+								<input class="form-control" id="email" name="email" placeholder="Email" type="email"
+									required>
 							</div>
 						</div>
-						<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+						<textarea class="form-control" id="comments" name="comments" placeholder="Comment"
+							rows="5"></textarea>
 						<br>
 						<div class="row">
 							<div class="col-md-12 form-group">
@@ -924,27 +1023,36 @@
 					<h4><a href="https://www.ieee.org/">IEEE</a> Important Links</h4>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<ul>
-							<li><a href="https://www.ieee.org/membership/join/index.html" target="_blank">Join IEEE</a></li>
+							<li><a href="https://www.ieee.org/membership/join/index.html" target="_blank">Join IEEE</a>
+							</li>
 							<li><a href="https://www.ieee.org/membership/index.html" target="_blank">Membership</a></li>
-							<li><a href="https://www.ieee.org/conferences/index.html" target="_blank">Conferences</a></li>
-							<li><a href="https://www.ieee.org/publications/index.html" target="_blank">Publications</a></li>
-							<li><a href="https://www.ieee.org/about/contact.html" target="_blank">Contact and Support</a></li>
+							<li><a href="https://www.ieee.org/conferences/index.html" target="_blank">Conferences</a>
+							</li>
+							<li><a href="https://www.ieee.org/publications/index.html" target="_blank">Publications</a>
+							</li>
+							<li><a href="https://www.ieee.org/about/contact.html" target="_blank">Contact and
+									Support</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 						<ul>
-							<li><a href="https://www.ieee.org/membership/students/awards/student-travel-grants.html" target="_blank">Student
+							<li><a href="https://www.ieee.org/membership/students/awards/student-travel-grants.html"
+									target="_blank">Student
 									Travel Grants</a></li>
-							<li><a href="https://www.ieee.org/about/awards/index.html" target="_blank">Awards and Recognitions</a></li>
+							<li><a href="https://www.ieee.org/about/awards/index.html" target="_blank">Awards and
+									Recognitions</a></li>
 							<li><a href="https://ias.ieee.org/chapters-membership/chapter-promotion-programs,-awards-and-contests.html"
-								 target="_blank">IAS Awards</a></li>
-							<li><a href="https://www.ieee.org/communities/forms_petitions.html" target="_blank">IEEE Chapter Formation </a></li>
-							<li><a href="https://students.ieee.org/student-branch-reporting/" target="_blank">Student Branch Reporting</a></li>
+									target="_blank">IAS Awards</a></li>
+							<li><a href="https://www.ieee.org/communities/forms_petitions.html" target="_blank">IEEE
+									Chapter Formation </a></li>
+							<li><a href="https://students.ieee.org/student-branch-reporting/" target="_blank">Student
+									Branch Reporting</a></li>
 						</ul>
 					</div>
 
 					<h4>Follow Us</h4>
-					<a href="https://www.facebook.com/ieee.iitmandi/"><i class="fab fa-facebook" style="color: #3B5998"></i> &nbsp;Facebook</a>
+					<a href="https://www.facebook.com/ieee.iitmandi/"><i class="fab fa-facebook"
+							style="color: #3B5998"></i> &nbsp;Facebook</a>
 				</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -954,8 +1062,9 @@
 						<!-- GOOGLE MAP -->
 						<div id="google-map" class="text-center mb-10">
 
-							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3391.8198239539556!2d76.983886!3d31.7753998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904e36054b1fd81%3A0xc3174a90dec9f339!2sIndian+Institute+of+Technology%2C+Mandi!5e0!3m2!1sen!2sin!4v1552585947741"
-							 width="80%" height="350px" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3391.8198239539556!2d76.983886!3d31.7753998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904e36054b1fd81%3A0xc3174a90dec9f339!2sIndian+Institute+of+Technology%2C+Mandi!5e0!3m2!1sen!2sin!4v1552585947741"
+								width="80%" height="350px" frameborder="0" style="border:0" allowfullscreen></iframe>
 							<br>
 
 						</div>
@@ -966,12 +1075,39 @@
 			</div>
 		</div>
 		<br>
-		<p style="text-align: center; font-size: 14px"">© 2021 IEEE <a href="https://iitmandi.ac.in">IIT Mandi</a> - All
-            rights reserved. A not-for-profit organization, IEEE is the world's largest technical professional
-            organization dedicated to advancing technology for the benefit of humanity.</p>
+		<p style="text-align: center; font-size: 14px"">© 2021 IEEE <a href=" https://iitmandi.ac.in">IIT Mandi</a> -
+			All
+			rights reserved. A not-for-profit organization, IEEE is the world's largest technical professional
+			organization dedicated to advancing technology for the benefit of humanity.</p>
 	</div>
 
 	<!--FOOTER ENDS-->
+
+	<!--BANNER STARTS-->
+
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+		window.cookieconsent.initialise({
+			"palette": {
+				"popup": {
+					"background": "#000000",
+					"text": "#ffffff"
+				},
+				"button": {
+					"background": "#ffffff",
+					"text": "#000000"
+				}
+			},
+			"content": {
+				"message": "IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read our",
+				"dismiss": "Accept &amp; Close",
+				"link": "Privacy Policy",
+				"href": "https://www.ieee.org/about/help/security_privacy.html"
+			}
+		});
+	</script>
+
+	<!--BANNER ENDS-->
 
 	<script>
 		$(window).scroll(function () {
@@ -984,6 +1120,8 @@
 			});
 		});
 	</script>
+
+
 </body>
 
 </html>
