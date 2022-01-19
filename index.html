@@ -329,8 +329,8 @@
 
 	<!-- QUOTATION STARTS -->
 	<br>
-	<div class="container-fluid quotes">
-		<div id="text-carousel" class="carousel slide" data-ride="carousel">
+	<div class="container-fluid quotes" style="background-image: url(img/bg-quote.jpg);">
+		<div id="text-carousel" class="carousel slide" data-ride="carousel" >
 			<i class="fas fa-quote-left"
 				style="color: white; margin-left: 20%; font-size: 70px; opacity: 0.5; position: absolute;"></i>
 			<!-- Wrapper for slides -->
@@ -947,21 +947,22 @@
 				</div>
 			</div>
 			<br> <button onclick="myFunction()" id="more_less" class="btn" type="button" data-toggle="collapse"
-            data-target="#moreevent" aria-expanded="false" aria-controls="moreevent">More..</button>
+				data-target="#moreevent" aria-expanded="false" aria-controls="moreevent">More..</button>
 			<br>
 		</div>
 	</div>
 	<script>
 		function myFunction() {
-		  var more = document.getElementById("more_less");
+			var more = document.getElementById("more_less");
 
-		  if (more.innerHTML === "Show Less") {
-			more.innerHTML = "More..";
-		  } else {
-			more.innerHTML = "Show Less";
-		  }
+			if (more.innerHTML === "Show Less") {
+				more.innerHTML = "More..";
+				window.location.hash = "membershere";
+			} else {
+				more.innerHTML = "Show Less";
+			}
 		}
-	  </script>
+	</script>
 
 	<!--MEMBERS END-->
 
@@ -1148,7 +1149,7 @@
 			</div>
 		</div>
 		<br>
-		<p style="text-align: center; font-size: 14px"">© 2021 IEEE <a href=" https://iitmandi.ac.in">IIT Mandi</a> -
+		<p style="text-align: center; font-size: 14px">© 2021 IEEE <a href=" https://iitmandi.ac.in">IIT Mandi</a> -
 			All
 			rights reserved. A not-for-profit organization, IEEE is the world's largest technical professional
 			organization dedicated to advancing technology for the benefit of humanity.</p>
