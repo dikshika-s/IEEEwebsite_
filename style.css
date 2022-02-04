@@ -290,3 +290,51 @@ canvas[resize] {
 	width: 100%;
 	height: 100%;
 }
+/* for achievement cards of landing page */
+.blog-item {
+	background-color: #fff;
+	border-radius: 7px;
+	margin-bottom: 30px;
+	text-align: center;
+	box-shadow: 0 8px 24px #E2E8ED;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.blog-item .icon {
+	position: absolute;
+	top: -25px;
+	left: 42%;
+	background-image: linear-gradient(65deg, #000000 0, #1f1d1d 100%);
+	color: #ffffff;
+	display: block;
+	font-size: 26px;
+	width: 60px;
+	height: 60px;
+	line-height: 65px;
+	border-radius: 30px;
+}
+
+.blog-item .descr {
+	padding: 50px 25px 20px;
+	color: #212121;
+	position: relative;
+
+}
+
+.blog-item .descr h3 {
+	line-height: 22px;
+	margin-bottom: 15px;
+}
+
+.blog-item .meta-tags {
+	background: #f5f6f6;
+	padding: 10px;
+}
+
+.blog-item .meta-tags span {
+	font-size: 14px;
+	color: #999;
+	margin: 15px;
+}
