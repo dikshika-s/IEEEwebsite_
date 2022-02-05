@@ -296,12 +296,18 @@ canvas[resize] {
 	border-radius: 7px;
 	margin-bottom: 30px;
 	text-align: center;
-	box-shadow: 0 8px 24px #E2E8ED;
+	border: 1px solid;
 	-webkit-transition: all 300ms ease-in-out;
 	-moz-transition: all 300ms ease-in-out;
 	transition: all 300ms ease-in-out;
 }
-
+.blog-item:hover{
+	filter: blur(0px);
+    transform: scale(1.06);
+    opacity: 1;
+	box-shadow: 0 8px 24px #E2E8ED;
+	cursor: pointer;
+}
 .blog-item .icon {
 	position: absolute;
 	top: -25px;
@@ -326,15 +332,4 @@ canvas[resize] {
 .blog-item .descr h3 {
 	line-height: 22px;
 	margin-bottom: 15px;
-}
-
-.blog-item .meta-tags {
-	background: #f5f6f6;
-	padding: 10px;
-}
-
-.blog-item .meta-tags span {
-	font-size: 14px;
-	color: #999;
-	margin: 15px;
 }
