@@ -368,3 +368,128 @@ p {
         max-width: 125%;
     }
 }
+    header {
+        background-color: #404040;
+        padding: 20px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+    }
+
+    .navbar {
+        font-family: montserrat;
+        border-radius: 0;
+        opacity: 1;
+        background-color: black !important;
+    }
+
+    .navbar li a {
+        color: #d5d5d5 !important;
+        font-size: 17px;
+        padding: 18px !important;
+        transition: .3s;
+    }
+
+    .navbar-nav li a:hover {
+        color: white !important;
+    }
+
+    .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: #29292c !important;
+    }
+
+    p {
+        color: black;
+    }
+    body {
+        background: #eee;
+        margin-top: 20px;
+    }
+
+    .verti-timeline {
+        border-left: 3px dashed #e9ecef;
+        margin: 0 10px;
+    }
+
+    .verti-timeline .event-list {
+        position: relative;
+        padding: 40px 15px 40px;
+        border-top: 3px solid #e9ecef;
+    }
+
+    .verti-timeline .event-list .event-date {
+        position: absolute;
+        right: 0;
+        top: -2px;
+        padding: 12px;
+        color: #fff;
+        border-radius: 0 0 7px 7px;
+        text-align: center;
+    }
+
+    .verti-timeline .event-list .event-content {
+        position: relative;
+        border: 2px solid #e9ecef;
+        border-radius: 7px;
+        text-align: center;
+    }
+
+    .verti-timeline .event-list .event-content::before {
+        content: "";
+        position: absolute;
+        height: 40px;
+        width: 75%;
+        top: -42px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-left: 12px double #e9ecef;
+        border-right: 12px double #e9ecef;
+    }
+
+    .verti-timeline .event-list .timeline-icon {
+        position: absolute;
+        left: -14px;
+        top: -10px;
+    }
+
+    .verti-timeline .event-list .timeline-icon i {
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        line-height: 23px;
+        font-size: 20px;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+    }
+
+    .verti-timeline .event-list:last-child {
+        padding-bottom: 0;
+    }
+
+    @media (min-width: 769px) {
+        .verti-timeline {
+            margin: 0 60px;
+        }
+
+        .verti-timeline .event-list {
+            padding: 40px 90px 60px 40px;
+        }
+    
+    }
+
+    @media (max-width: 768px) {
+        .verti-timeline .event-list .event-date {
+            right: -20px;
+        }
+        .verti-timeline .event-list .event-content{
+            padding: 30px ;
+        }
+    }
+
+    .card {
+        border: none;
+        margin-bottom: 24px;
+    }
