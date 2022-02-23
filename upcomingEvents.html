@@ -37,59 +37,6 @@
   p{
     color: black;
 }
-button {
- text-decoration: none;
- position: absolute;
- border: none;
- font-size: 14px;
- font-family: inherit;
- color: #fff;
- width: 12em;
- height: 4em;
- line-height: 2em;
- text-align: center;
- background: linear-gradient(90deg,#0c0b3b,#222a57,#909dc9,#212864);
- background-size: 300%;
- border-radius: 30px;
- z-index: 1;
-}
-
-button:hover {
- animation: ani 8s linear infinite;
- border: none;
-}
-
-@keyframes ani {
- 0% {
-  background-position: 0%;
- }
-
- 100% {
-  background-position: 400%;
- }
-}
-
-button:before {
- content: '';
- position: absolute;
- top: -5px;
- left: -5px;
- right: -5px;
- bottom: -5px;
- z-index: -1;
- background: linear-gradient(90deg,#0c0b3b,#222a57,#909dc9,#212864);
- background-size: 400%;
- border-radius: 35px;
- transition: 1s;
-}
-
-button:hover::before {
- filter: blur(20px);
-}
-
-button:active {
- background: linear-gradient(32deg,#0c0b3b,#222a57,#909dc9,#212864);
-}
 </style>
 <head>
 
@@ -103,6 +50,7 @@ button:active {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/templatemo-style.css">
     </head>
 
@@ -125,9 +73,17 @@ button:active {
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#resource">Resources</a></li>
-                    <li><a href="upcomingEvents.html">Events</a></li>
-                    <li><a href="achievements.html">Awards</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
                     <li><a href="index.html#membershere">Executive Council</a></li>
+                    <li class="drop-down"><a href="">Events</a>
+                        <ul>
+                            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
+                            <li><a href="events2022.html">Events 2022</a></li>
+                            <li><a href="events2021.html">Events 2021</a></li>
+                            <li><a href="events2020.html">Events 2020</a></li>
+                            <li><a href="events2019.html">Events 2019</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#gallery">Gallery</a></li>
                     <li><a href="index.html#contact_us">Contact</a></li>
                 </ul>
@@ -136,224 +92,428 @@ button:active {
     </nav>
 
     <!-- NAVBAR ENDS -->
-    <br><br>
+    <br>
     <div class="jumbotron" id="vanta-bg"><h1 style="color: rgb(255, 255, 255); text-align: center;">Upcoming Events</h1></div>
-    <br><br><br><br><br>
-    <div class="container text-center" id="members_here">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <h4 style="color: rgb(255, 255, 255)"><a href="#"><button style="color:white;">Upcoming Events</button></a></h4>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <h4 style="color: rgb(255, 255, 255)"><a href="events2021.html"><button style="color:white;">Events-2021</button></a></h4>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <h4 style="color: rgb(255, 255, 255)"><a href="events2020.html"><button style="color:white;">Events-2020</button></a></h4>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <h4 style="color: rgb(255, 255, 255)"><a href="events2019.html"><button style="color:white;">Events-2019</button></a></h4>
-            </div>
-        </div>
-    </div>
-    <br><br><br><br><br>
     <div class="container">
         <div class="container tm-container-2">
             <div class="row tm-section-mb">
-                <div class="col-lg-12">
-                    <div class="tm-timeline-item">
-                        <div class="tm-timeline-item-inner">
-                            <img src="img/workshop.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                            <div class="tm-timeline-connector">
-                                <p class="mb-0">&nbsp;</p>
-                            </div>
-                            <div class="tm-timeline-description-wrap">
-                                <div class="tm-bg-dark-light tm-timeline-description">
-                                    <h3 class="tm-text-orange tm-font-400"><a href="http://iitmandi.ac.in/workshops/RTDSPEA2019/index.php" target="_blank"><b>National Workshop:</b> Real Time Simulation for Power Engineering</a></h3>
-                                    <p>The workshop’s objective is to enhance the knowledge with hands on experience of the participants in the area of the “Real-Time Digital Simulation for Power Engineering Applications”. The workshop on real-time controller is to bring together researchers working on real-time systems (under graduate and graduate students and PhD students, faculty members, postdocs, etc). The workshop provides a relaxed forum to present and discuss new ideas, to explore new research directions, and to review current trends in the real-time systems area. It is based on both short presentations and hands on experience session to encourage stimulating discussions.
-                                        <strong>IEEE IAS</strong> Student Branch IIT Mandi.</p>
-                                    <p class="tm-text-orange float-right mb-0"><strong>Date:</strong><span> 13/06/2019 to 16/06/2019</span><br>
-                                    </p>
+                <div class="col-lg-12" style="padding-top: 40px;">
+                    <br>
+                    <br>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-10">
+                                                <ul class="verti-timeline list-unstyled" dir="ltr">
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-success"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Presentation: Taking
+                                                                    research Beyond
+                                                                    Publications: IP laws and patents</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-2">
+                                                                    The present global shift in the application oriented
+                                                                    research besides basic
+                                                                    research demands for the proper protection of
+                                                                    inventions. The presentation will
+                                                                    encourage and focus on the research community to
+                                                                    have an exposure for the means
+                                                                    of protection of their inventions and also to serve
+                                                                    the community by effective
+                                                                    ways.<br>
+                                                                    <b>Speaker:</strong><span>Dr. Venkatesan</b></span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">13</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-danger"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Field visit:</b> Hydro
+                                                                Power Station and
+                                                                Sub-station</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-2">
+                                                                    A field visit to <strong>Hydro Power
+                                                                        Station</strong> and Sub-station was
+                                                                    organised. Students explored a lot in their
+                                                                    respective field of education and
+                                                                    interest.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">05</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-primary"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Field visit:</b> Larji
+                                                                Hydel Power
+                                                                Project(Mandi),Electric
+                                                                Substation(Bijni),<br>HPSEBL(Sundernagar)</h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-4">
+                                                                    A field visit to following places has been arranged
+                                                                    for students.<br>1. Larji
+                                                                    Hydel Power Project (126 MW), Mandi<br>2. Electric
+                                                                    Substation (132/33 kV) at
+                                                                    Bijni, Mandi<br>3. H.P Maintenance and Testing
+                                                                    division of Transformer, HPSEBL,
+                                                                    Sundernagar. </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">02</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Lecture:</b> Rechargeable
+                                                                Aqueous Na-air
+                                                                Battery</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    <strong>IEEE</strong> Delhi Section
+                                                                    <strong>PES-IAS</strong> Chapter Lecture,
+                                                                    co-sponsored by PELS-IAS Chapter. With the
+                                                                    increasing demand of cost-effective
+                                                                    high energy devices, sodium-air batteries have
+                                                                    attracted immense interests due
+                                                                    to the natural abundance of sodium in contrast to
+                                                                    lithium.
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">05</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Presentation:</b> Taking
+                                                                research Beyond
+                                                                Publications: How and Why?</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    The present global shift in the application oriented
+                                                                    research besides basic
+                                                                    research demands for the proper protection of
+                                                                    inventions. The presentation will
+                                                                    encourage and focus on the research community to
+                                                                    have an exposure for the means
+                                                                    of protection of their inventions and also to serve
+                                                                    the community by effective
+                                                                    ways. <br>
+                                                                    <b><strong>Speaker: </strong><span> Dr.
+                                                                            Venkatesan</span></b>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">13</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Meeting: Inflatable Rubber
+                                                                    Dam</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    An interaction meeting with <strong>HPSEB
+                                                                        Ltd.</strong> and key design team has
+                                                                    been scheduled. HPSEB Ltd. is planning to go for
+                                                                    Inflatable Rubber Dam in Kullu
+                                                                    for a site with low head. Speaker will be presenting
+                                                                    desing challaenges
+                                                                    and opportunities.<br>
+                                                                    <b>Speaker:</strong><span> Er. Rajan Kapur, SE
+                                                                            Planning, HPSEB Ltd.</span></b>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">16</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Talk: Professional Ethics
+                                                                    and Value
+                                                                    Education for Engineering Education</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    A Professional Talk was being organized by
+                                                                    <strong>IEEE PES-IAS</strong> Delhi
+                                                                    Chapter and co-sponsored by
+                                                                    <strong>PELS-IES</strong> Delhi Chapter.<br>
+                                                                    <b><strong>Speaker:</strong><span> Prof. Rajeev
+                                                                            Sangal, Director, IIT BHU</span></b>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">26</h5>
+                                                            <p class="mb-0 text-white-50">Apr</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Contest: Energy Saving and
+                                                                    Innovation
+                                                                    in the Usage of Renewable Energy</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    Design and painting competition with Theme on
+                                                                    <strong>Energy Saving and
+                                                                        Innovation in the Usage of Renewable
+                                                                        Energy</strong> was organised.
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">18</h5>
+                                                            <p class="mb-0 text-white-50">Jun</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Talk: Solar Energy Research
+                                                                    and
+                                                                    Applications for Western Himalayan Region </b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    A Technical Talk was being organized by <strong>IEEE
+                                                                        PES-IAS</strong> Delhi
+                                                                    Chapter and co-sponsored by
+                                                                    <strong>PELS-IES</strong> Delhi Chapter. The speaker
+                                                                    have under taken a research project
+                                                                    for HP Govt on identifying possible sites for MW
+                                                                    level solar power plants. He is
+                                                                    also working on Solar
+                                                                    photovoltaic, Solar Wind hybrid systems and Passive
+                                                                    solar technology for space
+                                                                    heating of buildings with focus
+                                                                    on the Himalayan region. In this context he shared
+                                                                    his experiences and presented
+                                                                    outcomes of research project.<br>
+                                                                    <b><strong><span> Speaker: Prof. S. S. Chandel, NIT
+                                                                                Hamirpur.</span></strong></b>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">23</h5>
+                                                            <p class="mb-0 text-white-50">Sep</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Lecture: Energy Efficiency
+                                                                    of Medium
+                                                                    Voltage Drives</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    Student Design Contest for <strong>Developing Low
+                                                                        Cost and Efficient Renewable
+                                                                        Energy based Applications</strong> was
+                                                                    organised.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">10</h5>
+                                                            <p class="mb-0 text-white-50">July</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Workshop:</b> Teaching and
+                                                                Learning</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    A half day workshop on Teaching and Learning was
+                                                                    arranged by IIT Mandi for many of those who were
+                                                                    pursuing higher studies and had
+                                                                    aims of following a teaching career in their
+                                                                    life.The workshop covered<br>
+                                                                    1) General aspects good teaching and learning
+                                                                    and<br>
+                                                                    2) Those aspects that are particularly relevant to
+                                                                    Teaching Assistants.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">16</h5>
+                                                            <p class="mb-0 text-white-50">Dec</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Talk: Renewable Energy and
+                                                                    Cooling</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    A Technical Talk was being organized by <strong>IEEE
+                                                                        PES-IAS</strong> Delhi
+                                                                    Chapter and co-sponsored by
+                                                                    <strong>PELS-IES</strong> Delhi Chapter.In the past
+                                                                    decade two significant trends have developed
+                                                                    in India. The first, Solar photovoltaic deployment
+                                                                    is well known and
+                                                                    quantified.The second trend is also well known,
+                                                                    but not well quantified. In the past decade,
+                                                                    residential and commercial air
+                                                                    conditioning deployment has grown.In this talk the
+                                                                    discussion topic was the
+                                                                    opportunity at the intersection of these trends.<br>
+                                                                    <b><strong>Speaker:</strong><span>Dr. Rajan Kapur,
+                                                                            USA</span></b>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">19</h5>
+                                                            <p class="mb-0 text-white-50">Nov</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Field visit: Shanon/Bassi
+                                                                    Hydro Power
+                                                                    Station</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    A field visit to <strong>Shanon/Bassi Hydro Power
+                                                                        Station</strong> was been made
+                                                                    which was been schduled on Dec. 19th, 2016 from IIT
+                                                                    Mandi Kamand Campus and
+                                                                    back.</p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">19</h5>
+                                                            <p class="mb-0 text-white-50">Dec</p>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="event-list">
+                                                        <div class="timeline-icon">
+                                                            <i class="mdi mdi-adjust bg-warning"></i>
+                                                        </div>
+                                                        <div class="event-content p-4">
+                                                            <h5 class="mt-0 mb-3 font-18"><b>Contest: Energy Saving and
+                                                                    Innovation
+                                                                    in the Usage of Renewable Energy</b></h5>
+                                                            <div class="text-muted" style="margin: 10px;">
+                                                                <p class="mb-0">
+                                                                    Design and painting competition with Theme on
+                                                                    <strong>Energy Saving and
+                                                                        Innovation in the Usage of Renewable
+                                                                        Energy</strong> was held at IIT Mandi
+                                                                    for around School going students. Several IIT Mandi
+                                                                    engineering and science
+                                                                    labs. visit was also be arranged.
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="event-date bg-primary">
+                                                            <h5 class="mt-0">22</h5>
+                                                            <p class="mb-0 text-white-50">Dec</p>
+                                                        </div>
+                                                    </li>
+
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+                                    </div>
                                 </div>
+                                <!-- end card -->
                             </div>
                         </div>
-                        <div class="tm-timeline-connector-vertical"></div>
-                    </div>
-
-
-                        <div class="tm-timeline-item">
-                            <div class="tm-timeline-item-inner">
-                                <img src="img/talk.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                <div class="tm-timeline-connector">
-                                    <p class="mb-0">&nbsp;</p>
-                                </div>
-                                <div class="tm-timeline-description-wrap">
-                                    <div class="tm-bg-dark tm-timeline-description">
-                                        <h3 class="tm-text-yellow tm-font-400"><b>Talk:</b> E-Vehicle</h3>
-                                        <p>A technical talk on E-vehicle by Rajan Kapoor will be organised by <strong>IEEE IAS</strong>.</p>
-                                        <p class="tm-text-yellow float-right mb-0">
-                                            <strong>Speaker:</strong><span> Rajan Kapoor </span><br>
-                                           <strong>Date:</strong><span> 27/04/2019 </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/talk.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark-light tm-timeline-description">
-                                            <h3 class="tm-text-orange tm-font-400"><b>Talk:</b> High Voltage and Dielectrics</h3>
-                                            <p>An expert talk on <strong><i>High Voltage and Dielectrics</i></strong> by Prof R.
-                                                Arora.<br>
-                                            Prof. R. Arora is member of Faculty at IITK since 1974. He has done Dr. Ing. From TU Dresden, Germany in 1973. He teaches seven different courses on power systems, electrical machines, high voltage engineering and electrical science. He is involved in providing consultancy services to many large industrial organizations and small entrepreneurs for their product development and problems with high voltage insulation like NTPC, BHEL, UPSEB, and ONGC. A considerable amount of testing work of transformers, cables, electrical instruments and dielectric materials is undertaken in his high voltage laboratory under his guidance.</p>
-                                            <p class="tm-text-orange float-right mb-0"><strong>Speaker:</strong><span> Prof R. Arora</span><br>
-                                              <strong>Date:</strong><span> 06/05/2019 </span></p>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="tm-timeline-connector-vertical"></div>
-                              </div>
-
-                              <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/workshop.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark tm-timeline-description">
-                                            <h3 class="tm-text-yellow tm-font-400"><b>Workshop:</b> Technical Project Demonstration</h3>
-                                            <p><strong>IEEE IAS</strong> Student Branch IIT Mandi is going to organise ‘Technical Project Demonstration’ for final year B.Tech students where they will demonstrate their final year project and
-                                            best project will be awarded.</p>
-                                            <p class="tm-text-yellow float-right mb-0"><strong>Date:</strong><span> 15/07/2019 </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/fieldvisit.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark tm-timeline-description">
-                                            <h3 class="tm-text-yellow tm-font-400"><b>Outreach Activity: </b> Visit of rural inhabitant children to IIT Mandi</h3>
-
-                                            <p class="tm-text-yellow float-right mb-0">	<strong>Date:</strong><span> 15/07/2019</span><br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/lecture.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark-light tm-timeline-description">
-                                            <h3 class="tm-text-orange tm-font-400"><b>Awareness:</b> Students Professional Awareness</h3>
-                                            <p>Students Professional Awareness – Panel Discussion will be organised by IEEE Student branch IIT Mandi, <strong>IEEE IAS</strong>, IEEE
-                                                RAS, IEEE WIE in association with SPAA.<br>
-                                            Experts from different areas like industries or entrepreneurs will discuss about the professional world.</p>
-                                            <p class="tm-text-orange float-right mb-0"><strong>Date:</strong><span> 24/08/2019</span><br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/workshop.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark tm-timeline-description">
-                                            <h3 class="tm-text-yellow tm-font-400"><b>Workshop:</b> Ansys software for FEM- 2D Maxwell of machines</h3>
-                                            <p>“Ansys software for FEM- 2D Maxwell of machines” workshop will be organised by <strong>IEEE IAS</strong> Student chapter IIT Mandi.</p>
-                                            <p class="tm-text-yellow float-right mb-0"><strong>Date:</strong><span> September 2019</span><br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/workshop.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark-light tm-timeline-description">
-                                            <h3 class="tm-text-orange tm-font-400"><b>Workshop:</b> RTDS and OPAL-RT simulators</h3>
-                                            <p>Hands on workshop on RTDS and OPAL-RT simulators.</p>
-                                            <p class="tm-text-orange float-right mb-0"><strong>Date:</strong><span> October 2019</span><br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/talk.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark tm-timeline-description">
-                                            <h3 class="tm-text-yellow tm-font-400"><b>Talk:</b> Women Empowerment in Technical and Professional Fields</h3>
-                                            <p>A talk on Women empowerment in technical and professional fields will be organised by <strong>IEEE IAS</strong> Student chapter IIT
-                                            Mandi.</p>
-                                            <p class="tm-text-yellow float-right mb-0"><strong>Date:</strong><span> November 2019</span><br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tm-timeline-connector-vertical"></div>
-                            </div>
-
-                            <div class="tm-timeline-item">
-                                <div class="tm-timeline-item-inner">
-                                    <img src="img/meeting.jpg" alt="Image" class="rounded-circle tm-img-timeline">
-                                    <div class="tm-timeline-connector">
-                                        <p class="mb-0">&nbsp;</p>
-                                    </div>
-                                    <div class="tm-timeline-description-wrap">
-                                        <div class="tm-bg-dark-light tm-timeline-description">
-                                            <h3 class="tm-text-orange tm-font-400"><b>Drive:</b> Student Membership drive for 2020</h3>
-                                            <p>Student Membership drive for 2020</p>
-                                            <p class="tm-text-orange float-right mb-0">  <strong>Date:</strong><span> December 2019</span><br>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    
 
         <!--------------- Footer------------------- -->
     <div class="container-fluid footer">
@@ -373,7 +533,7 @@ button:active {
                     <a href="https://www.ieee.org/about/help/site-terms-conditions.html" id="u-terms">Terms</a>
                 </p>
             </div>
-            <div class="container_image" style="padding-top: 18px;" >
+            <div class="container_img" style="padding-top: 18px;" >
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
                     <a id="util" href="https://www.ieee.org/" target="_blank" > <img
                             src="img/ieee mb white png.png" width="50%"></a>
