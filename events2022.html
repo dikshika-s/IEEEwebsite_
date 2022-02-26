@@ -28,8 +28,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/ieee mb white png.png" alt="Logo" style="height: 40px; transform: translate(3px,-5px);"
-						id="logo">
+                    <img src="img/ieee mb white png.png" alt="Logo"
+                        style="height: 40px; transform: translate(3px,-5px);" id="logo">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -38,7 +38,7 @@
                     <li><a href="index.html#resource">Resources</a></li>
                     <li><a href="achievements.html">Achievements</a></li>
                     <li><a href="index.html#membershere">Executive Council</a></li>
-                    <li class="drop-down"><a href="">Events</a>
+                    <li class="drop-down"  id="events-drop-down"><a href="#">Events</a>
                         <ul>
                             <li><a href="upcomingEvents.html">Upcoming Events</a></li>
                             <li><a href="events2022.html">Events 2022</a></li>
@@ -756,7 +756,13 @@
             points: 15.00
         })
     </script>
-
+    <script>
+        jQuery(document).ready(function () {
+            if ($(window).width() < 999) {
+                $('#events-drop-down').removeClass('drop-down');
+            }
+        });
+    </script>
 </body>
 
 </html>
