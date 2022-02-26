@@ -262,7 +262,9 @@ iframe {
 	color: #FFF;
     box-shadow: 0 0 0 0.2rem #cccccc14;
 }
-
+.text-muted{
+    font-family: 'Abel', sans-serif;
+}
 input,
 textarea,
 [contenteditable] {
@@ -408,14 +410,14 @@ p {
     }
 
     .verti-timeline {
-        border-left: 3px dashed #e9ecef;
+        border-left: 3px dashed #131c25;
         margin: 0 10px;
     }
 
     .verti-timeline .event-list {
         position: relative;
         padding: 40px 15px 40px;
-        border-top: 3px solid #e9ecef;
+        border-top: 3px solid #131c25;
     }
 
     .verti-timeline .event-list .event-date {
@@ -430,7 +432,7 @@ p {
 
     .verti-timeline .event-list .event-content {
         position: relative;
-        border: 2px solid #e9ecef;
+        border: 2px solid #6c86a1;
         border-radius: 7px;
         text-align: center;
         
@@ -445,8 +447,8 @@ p {
         left: 0;
         right: 0;
         margin: 0 auto;
-        border-left: 12px double #e9ecef;
-        border-right: 12px double #e9ecef;
+        border-left: 9px double #131c25;
+        border-right: 9px double #131c25;
     }
 
     .verti-timeline .event-list .timeline-icon {
