@@ -320,10 +320,16 @@ canvas[resize] {
 }
 
 .blog-item .descr {
-	padding: 50px 25px 20px;
+	padding: 45px 15px 20px;
 	color: #212121;
 	position: relative;
 
+}
+.blog-item .descr h3{
+	font-family: 'Vollkorn', serif;
+}
+.blog-item .descr p{
+	font-family: 'Zilla Slab', serif;
 }
 
 .blog-item .descr h3 {
