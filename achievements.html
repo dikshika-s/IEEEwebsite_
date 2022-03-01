@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+    @media (max-width:999px) {
+        .drop-down-menu {
+            display: none;
+        }
+    }
+
     header {
         background-color: #404040;
         padding: 20px;
@@ -50,7 +56,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/awards.css">
-    
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
@@ -383,6 +389,17 @@
             }
         });
     </script>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li.drop-down').click(function () {
+                $('li.drop-down').not(this).find('ul').hide();
+                $(this).find('ul').toggle();
+            });
+        });  
+    </script>
+
 </body>
 
 </html>

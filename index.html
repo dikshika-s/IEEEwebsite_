@@ -77,6 +77,12 @@
 	</script>
 
 	<style type="text/css">
+		@media (max-width:999px) {
+			.drop-down-menu {
+				display: none;
+			}
+		}
+
 		a.back-to-top {
 			display: none;
 			position: fixed;
@@ -106,9 +112,8 @@
 		a.back-to-top:focus {
 			text-decoration: none;
 		}
-		
 	</style>
-	
+
 </head>
 
 <body data-target=".navbar" data-offset="50" id="myPage">
@@ -133,9 +138,8 @@
 					<li><a href="index.html#resource">Resources</a></li>
 					<li><a href="#achievements">Achievements</a></li>
 					<li><a href="index.html#membershere">Executive Council</a></li>
-					<li class="drop-down" id="events-drop-down"><a href="#">Events &nbsp<i
-								class="fa fa-caret-down"></i></a>
-						<ul>
+					<li class="drop-down" id="events-drop-down"><a>Events &nbsp<i class="fa fa-caret-down"></i></a>
+						<ul class="drop-down-menu">
 							<li><a href="upcomingEvents.html">Upcoming Events</a></li>
 							<li><a href="events2022.html">Events 2022</a></li>
 							<li><a href="events2021.html">Events 2021</a></li>
@@ -646,14 +650,15 @@
 			<div class="row">
 				<div class="container_image">
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-						<a href="https://ieee-collabratec.ieee.org/" target="_blank"><img class="res_img" src="img/ieeecollaboratec.png"
-								width="70%"></a>
+						<a href="https://ieee-collabratec.ieee.org/" target="_blank"><img class="res_img"
+								src="img/ieeecollaboratec.png" width="70%"></a>
 					</div>
 				</div>
 
 				<div class="container_image">
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-						<a href="http://yp.ieee.org/" target="_blank"> <img class="res_img_2" src="img/ieeeYP.png" width="70%"></a>
+						<a href="http://yp.ieee.org/" target="_blank"> <img class="res_img_2" src="img/ieeeYP.png"
+								width="70%"></a>
 					</div>
 				</div>
 
@@ -667,18 +672,19 @@
 			</div>
 
 			<div class="row">
-				<div  class="resource_image">
+				<div class="resource_image">
 					<div class="col-sm-2 col-md-2 col-lg-2"></div>
 				</div>
-				<div  class="container_image">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
-						<a href="https://ieeetv.ieee.org/" target="_blank"> <img class="res_img" src="img/ieeeTV.jpg" width="40%"></a>
+				<div class="container_image">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="https://ieeetv.ieee.org/" target="_blank"> <img class="res_img" src="img/ieeeTV.jpg"
+								width="40%"></a>
 					</div>
 				</div>
 				<div class="container_image">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
-						<a href="http://sites.ieee.org/vtools/" target="_blank"> <img class="res_img" src="img/ieeevtools.png"
-								width="40%"></a>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="http://sites.ieee.org/vtools/" target="_blank"> <img class="res_img"
+								src="img/ieeevtools.png" width="40%"></a>
 					</div>
 				</div>
 				<div class="container_image">
@@ -689,14 +695,16 @@
 		<br>
 	</div>
 	<style>
-		@media screen and (max-width:750px){
-			.res_img{			
+		@media screen and (max-width:750px) {
+			.res_img {
 				padding-bottom: 10px;
 			}
-			.res_img_2{
+
+			.res_img_2 {
 				padding-bottom: 15px;
 			}
-			.res_img_3{
+
+			.res_img_3 {
 				padding-left: 5px;
 			}
 		}
@@ -2013,6 +2021,17 @@
 			}
 		});
 	</script>
+
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('li.drop-down').click(function () {
+				$('li.drop-down').not(this).find('ul').hide();
+				$(this).find('ul').toggle();
+			});
+		});  
+	</script>
+	
 </body>
 
 </html>

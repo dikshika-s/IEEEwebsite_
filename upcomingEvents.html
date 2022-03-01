@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+    @media (max-width:999px) {
+        .drop-down-menu {
+            display: none;
+        }
+    }
+
     header {
         background-color: #404040;
         padding: 20px;
@@ -264,6 +270,17 @@
             }
         });
     </script>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li.drop-down').click(function () {
+                $('li.drop-down').not(this).find('ul').hide();
+                $(this).find('ul').toggle();
+            });
+        });  
+    </script>
+
 </body>
 
 </html>
