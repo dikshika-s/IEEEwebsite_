@@ -106,8 +106,9 @@
 		a.back-to-top:focus {
 			text-decoration: none;
 		}
+		
 	</style>
-	</style>
+	
 </head>
 
 <body data-target=".navbar" data-offset="50" id="myPage">
@@ -371,7 +372,7 @@
 			<div id="band" class="text-center">
 				<br><br>
 				<h1>About Us</h1>
-				<hr style="width: 7%;"><br>
+				<hr style="border:solid black 1px;"><br>
 
 			</div>
 
@@ -644,39 +645,39 @@
 		<div class="container text-center" id="members_here">
 			<div class="row">
 				<div class="container_image">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" class="resource_image">
-						<a href="https://ieee-collabratec.ieee.org/" target="_blank"><img src="img/ieeecollaboratec.png"
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="https://ieee-collabratec.ieee.org/" target="_blank"><img class="res_img" src="img/ieeecollaboratec.png"
 								width="70%"></a>
 					</div>
 				</div>
 
 				<div class="container_image">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" class="resource_image">
-						<a href="http://yp.ieee.org/" target="_blank"> <img src="img/ieeeYP.png" width="70%"></a>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+						<a href="http://yp.ieee.org/" target="_blank"> <img class="res_img_2" src="img/ieeeYP.png" width="70%"></a>
 					</div>
 				</div>
 
 				<div class="container_image">
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" class="resource_image">
 						<a href="https://ieeexplore.ieee.org/Xplore/home.jsp" target="_blank"> <img
-								src="img/ieeeXplore.png" width="70%"></a>
+								src="img/ieeeXplore.png" class="res_img_3" width="70%"></a>
 					</div>
 				</div>
 
 			</div>
 
 			<div class="row">
-				<div  class="resource_image" class="container_image">
+				<div  class="resource_image">
 					<div class="col-sm-2 col-md-2 col-lg-2"></div>
 				</div>
 				<div  class="container_image">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" class="resource_image">
-						<a href="https://ieeetv.ieee.org/" target="_blank"> <img src="img/ieeeTV.jpg" width="40%"></a>
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+						<a href="https://ieeetv.ieee.org/" target="_blank"> <img class="res_img" src="img/ieeeTV.jpg" width="40%"></a>
 					</div>
 				</div>
 				<div class="container_image">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" class="resource_image">
-						<a href="http://sites.ieee.org/vtools/" target="_blank"> <img src="img/ieeevtools.png"
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+						<a href="http://sites.ieee.org/vtools/" target="_blank"> <img class="res_img" src="img/ieeevtools.png"
 								width="40%"></a>
 					</div>
 				</div>
@@ -685,15 +686,21 @@
 				</div>
 			</div>
 		</div>
-		<br><br>
+		<br>
 	</div>
-	<!-- <style>
-		@media screen and (max-width: 750px) {
-			.resource_image{
-				padding: 10px;
+	<style>
+		@media screen and (max-width:750px){
+			.res_img{			
+				padding-bottom: 10px;
+			}
+			.res_img_2{
+				padding-bottom: 15px;
+			}
+			.res_img_3{
+				padding-left: 5px;
 			}
 		}
-	</style> -->
+	</style>
 	<!-- Resources End -->
 
 	<!--Achievement Section-->
