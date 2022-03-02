@@ -437,7 +437,7 @@ p {
         border: 2px solid #e9ecef;
         border-radius: 7px;
         text-align: center;
-        
+        padding: 7px;
     }
 
     .verti-timeline .event-list .event-content::before {
