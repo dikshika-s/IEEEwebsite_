@@ -22,7 +22,9 @@ h5,
 h6 {
     font-weight: 300;
 }
-
+h5{
+    font-size: 16px;
+}
 /*h3 {
     font-size: 1.3rem;
 }*/
