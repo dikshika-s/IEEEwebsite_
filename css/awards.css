@@ -530,3 +530,9 @@ p {
     .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
        max-height: 540px;
    }}
+.navbar .drop-down ul {
+       list-style: none;
+    }  
+#ul-drop-down{
+        list-style: none;
+    }

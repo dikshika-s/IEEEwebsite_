@@ -498,3 +498,6 @@ p {
         border: none;
         margin-bottom: 24px;
     }
+    #ul-drop-down{
+        list-style: none;
+    }
