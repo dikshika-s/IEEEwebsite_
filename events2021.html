@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500|Open+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
@@ -23,6 +22,58 @@
             }
         }
     </style>
+
+    <script>
+        jQuery(document).ready(function() {
+            var $window = $(window);
+            var lastWindowWidth = $window.width();
+            $window.resize(function() {
+                var windowWidth = $window.width();
+                if (lastWindowWidth !== windowWidth) {
+                    lastWindowWidth = windowWidth;
+                }
+                setTimeout(function() {
+                    location.reload();
+                    console.log("delay");
+                }, 100);
+            });
+
+
+            if (lastWindowWidth < 1000) {
+                jQuery('.carousel[data-type=""] .item').each(function() {
+                    var next = jQuery(this).next();
+                    if (!next.length) {
+                        next = jQuery(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo(jQuery(this));
+
+                    for (var i = 0; i < 2; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = jQuery(this).siblings(':first');
+                        }
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
+            } else {
+                jQuery('.carousel[data-type="multi"] .item').each(function() {
+                    var next = jQuery(this).next();
+                    if (!next.length) {
+                        next = jQuery(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo(jQuery(this));
+
+                    for (var i = 0; i < 2; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = jQuery(this).siblings(':first');
+                        }
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 
 <body style="background-color: white">
@@ -32,13 +83,12 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/ieee mb white png.png" alt="Logo"
-                        style="height: 40px; transform: translate(5px,-10px);" id="logo">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                <a class="navbar-brand" href="#myPage">
+                    <img src="img/ieee mb white png.png" alt="Logo" style="height: 40px; transform: translate(5px,-10px);" id="logo">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -47,9 +97,8 @@
                     <li><a href="index.html#resource">Resources</a></li>
                     <li><a href="achievements.html">Achievements</a></li>
                     <li><a href="index.html#membershere">Executive Council</a></li>
-                    <li class="drop-down" id="events-drop-down"><a href="#">Events &nbsp<i
-                                class="fa fa-caret-down"></i></a>
-                        <ul>
+                    <li class="drop-down" id="events-drop-down"><a>Events &nbsp<i class="fa fa-caret-down"></i></a>
+                        <ul class="drop-down-menu">
                             <li><a href="upcomingEvents.html">Upcoming Events</a></li>
                             <li><a href="events2022.html">Events 2022</a></li>
                             <li><a href="events2021.html">Events 2021</a></li>
@@ -63,6 +112,52 @@
             </div>
         </div>
     </nav>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Transition effect for navbar
+            $(window).scroll(function() {
+                // checks if window is scrolled more than 500px, adds/removes solid class
+                if ($(this).scrollTop() > $(window).height()) {
+                    $('.navbar').addClass('solid');
+                } else {
+                    $('.navbar').removeClass('solid');
+                }
+            });
+        });
+        if ($('.nav-menu').length) {
+            var $mobile_nav = $('.nav-menu').clone().prop({
+                class: 'mobile-nav d-lg-none'
+            });
+            $('body').append($mobile_nav);
+            $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
+            $('body').append('<div class="mobile-nav-overly"></div>');
+
+            $(document).on('click', '.mobile-nav-toggle', function(e) {
+                $('body').toggleClass('mobile-nav-active');
+                $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+                $('.mobile-nav-overly').toggle();
+            });
+
+            $(document).on('click', '.mobile-nav .drop-down > a', function(e) {
+                e.preventDefault();
+                $(this).next().slideToggle(300);
+                $(this).parent().toggleClass('active');
+            });
+
+            $(document).click(function(e) {
+                var container = $(".mobile-nav, .mobile-nav-toggle");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    if ($('body').hasClass('mobile-nav-active')) {
+                        $('body').removeClass('mobile-nav-active');
+                        $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
+                        $('.mobile-nav-overly').fadeOut();
+                    }
+                }
+            });
+        } else if ($(".mobile-nav, .mobile-nav-toggle").length) {
+            $(".mobile-nav, .mobile-nav-toggle").hide();
+        }
+    </script>
     <!-- NAVBAR ENDS -->
 
     <br>
@@ -99,8 +194,7 @@
                                                                     A webinar on distinguished lecture upon <b>“Model
                                                                         predictive control in power electronics: a
                                                                         critical review and recent industrial
-                                                                        products”</b> was organised by IEEE student
-                                                                    branch chapter.
+                                                                        products”</b> was organised by IEEE student branch chapter.
                                                                     <br>
                                                                     <b><strong>Speaker: </strong><span> Professor Tobias
                                                                             Geyer, (ABB Corporate Research, Switzerland,
@@ -126,12 +220,8 @@
                                                                     Engineering</b></h5>
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-2">
-                                                                    An event on accelerating social innovation through
-                                                                    humanitarian engineering was organised by IEEE IIT
-                                                                    Mandi which focused on <b>IEEE HAC/SIGHT and its
-                                                                        role in IEEE framework</b>. An overview of IEEE
-                                                                    SIGHT was presented through membership statistics
-                                                                    and proposal funding statistics.
+                                                                    An event on accelerating social innovation through humanitarian engineering was organised by IEEE IIT Mandi which focused on <b>IEEE HAC/SIGHT and its
+                                                                        role in IEEE framework</b>. An overview of IEEE SIGHT was presented through membership statistics and proposal funding statistics.
                                                                     <br>
                                                                     <b><strong>Speaker: </strong><span> Mr. Sampathkumar
                                                                             Veeraraghavan, IEEE HAC 2021 chair, Past
@@ -157,11 +247,7 @@
                                                                     “Career Mould”</b></h5>
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-4">
-                                                                    A webinar on <b>“Career Mould”</b> was conducted by
-                                                                    IEEE PELS Student Branch Chapter IIT Mandi in
-                                                                    collaboration with IEEE IAS SBC IIT Mandi which was
-                                                                    delivered by <b>Prof. Ravindra Arora</b> a Senior
-                                                                    life member of IEEE.
+                                                                    A webinar on <b>“Career Mould”</b> was conducted by IEEE PELS Student Branch Chapter IIT Mandi in collaboration with IEEE IAS SBC IIT Mandi which was delivered by <b>Prof. Ravindra Arora</b>                                                                    a Senior life member of IEEE.
                                                                     <br>
                                                                     <b><strong>Speaker: </strong><span>Prof. Ravindra
                                                                             Arora (Senior Life Member,IEEE)</span></b>
@@ -185,12 +271,8 @@
                                                                 <p class="mb-0">
                                                                     A webinar on <b>“A Journey from Academia to
                                                                         industry”</b> delivered by <b>Dr Jyotirmoy
-                                                                        Ghosh</b> a highly renowned professor and highly
-                                                                    experienced in different research projects on analog
-                                                                    VLSI, Power Management IC and Switched-Mode Power
-                                                                    Supply (SMPS). Webinar was organised by IEEE PELS
-                                                                    Student Branch Chapter IIT Mandi in collaboration
-                                                                    with IEEE IAS SBC IIT Mandi.
+                                                                        Ghosh</b> a highly renowned professor and highly experienced in different research projects on analog VLSI, Power Management IC and Switched-Mode Power Supply (SMPS). Webinar was
+                                                                    organised by IEEE PELS Student Branch Chapter IIT Mandi in collaboration with IEEE IAS SBC IIT Mandi.
                                                                     <br>
                                                                     <b><strong>Speaker: </strong><span>Dr. Jyotirmoy
                                                                             Ghosh (Lead Design Engineer, NXP)</span></b>
@@ -214,13 +296,8 @@
                                                             </h5>
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
-                                                                    IEEE PELS Student Branch IIT Mandi in collaboration
-                                                                    with <b>IEEE IAS SBC IIT Mandi</b>, organised a
-                                                                    webinar on <b>“Career Opportunity in Academia and
-                                                                        research”.</b><br>
-                                                                    This webinar was delivered by, Prof. Sri Niwas Singh
-                                                                    a fellow IEEE which was about one-hour long
-                                                                    duration.
+                                                                    IEEE PELS Student Branch IIT Mandi in collaboration with <b>IEEE IAS SBC IIT Mandi</b>, organised a webinar on <b>“Career Opportunity in Academia and
+                                                                        research”.</b><br> This webinar was delivered by, Prof. Sri Niwas Singh a fellow IEEE which was about one-hour long duration.
                                                                     <br>
                                                                     <b><strong>Speaker: </strong><span> Prof. Sri Niwas
                                                                             Singh (Fellow, IEEE) </span></b>
@@ -244,12 +321,9 @@
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
                                                                     IEEE PELS SBC IIT Mandi has participated in <b>My
-                                                                        PELS chapter competition</b>. The chair Mr
-                                                                    Siddhant kumar has presented the Chapter in the
-                                                                    symposium and discussed about the activity of
-                                                                    <b>IEEE PELS SBC IIT</b> mandi and its glorious
-                                                                    achievement of fourth position in the final round
-                                                                    contest<br>
+                                                                        PELS chapter competition</b>. The chair Mr Siddhant kumar has presented the Chapter in the symposium and discussed about the activity of
+                                                                    <b>IEEE PELS SBC IIT</b> mandi and its glorious achievement of fourth position in the final round contest
+                                                                    <br>
                                                                     <b>Speaker:</strong><span> Mr Siddhant
                                                                             kumar</span></b>
                                                                 </p>
@@ -272,20 +346,9 @@
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
                                                                     IEEE student branch chapter conducted a webinar on
-                                                                    <b>“Disruption in Transport Sector”</b>delivered by
-                                                                    a highly experienced Prof. K.N.Srivastava
-                                                                    professional in power systems. The webinar focused
-                                                                    upon:<br>
-
-                                                                    1. Research<br>
-                                                                    2. Technology Disruption<br>
-                                                                    3. Strategic Planning<br>
-                                                                    4. Higher Education Consulting<br>
-                                                                    5. Innovative Education Systems Design<br>
-                                                                    6. Strategic Cost Management <br>
-                                                                    7. Mentoring, Coaching<br>
-                                                                    8. Power Systems, Modelling, Simulation, delivering
-                                                                    presentations that sticks
+                                                                    <b>“Disruption in Transport Sector”</b>delivered by a highly experienced Prof. K.N.Srivastava professional in power systems. The webinar focused upon:
+                                                                    <br> 1. Research<br> 2. Technology Disruption<br> 3. Strategic Planning<br> 4. Higher Education Consulting<br> 5. Innovative Education Systems Design<br> 6. Strategic Cost Management
+                                                                    <br> 7. Mentoring, Coaching<br> 8. Power Systems, Modelling, Simulation, delivering presentations that sticks
                                                                     <br>
                                                                     <b><strong>Speaker:</strong><span> Prof. K. N.
                                                                             Srivastava </span></b>
@@ -309,20 +372,10 @@
                                                                     Adaptation</b></h5>
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
-                                                                    IEEE DL was held on 16th April 2021 where Professor
-                                                                    David Hsu, provost chair at NSU discussed about the
-                                                                    following:<br>
-
-                                                                    1. Mathematical models for human intentions and
-                                                                    trust<br>
-                                                                    2. Planning and learning algorithms that leverage
-                                                                    the model to enable effective robot adaptation to
-                                                                    humans.<br>
-
-                                                                    This discussion spurred greater interest towards
-                                                                    principled approaches that integrate perception,
-                                                                    planning, and learning for seamless human-robot
-                                                                    collaboration.
+                                                                    IEEE DL was held on 16th April 2021 where Professor David Hsu, provost chair at NSU discussed about the following:
+                                                                    <br> 1. Mathematical models for human intentions and trust
+                                                                    <br> 2. Planning and learning algorithms that leverage the model to enable effective robot adaptation to humans.
+                                                                    <br> This discussion spurred greater interest towards principled approaches that integrate perception, planning, and learning for seamless human-robot collaboration.
                                                                     <br>
                                                                     <b><strong>Speaker:</strong><span>Professor David
                                                                             Hsu</span></b>
@@ -346,19 +399,9 @@
                                                                     Of IEEE Sight IIT Mandi</b></h5>
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
-                                                                    The IEEE SIGHT group of IIT Mandi organised an
-                                                                    executive committee meeting to discuss the current
-                                                                    and further plans of the group. The agenda of the
-                                                                    meet being:<br>
-                                                                    1. Get familiarised with the newly appointed
-                                                                    committee members.<br>
-                                                                    2. To address all the simple ideas of members that
-                                                                    could help the community around the campus and the
-                                                                    needy in general.<br>
-                                                                    3. To discuss plan of action and design a timeline
-                                                                    of events and plans for the upcoming year.<br>
-                                                                    4. Plan for initiatives that could help benefit the
-                                                                    institute environment.<br>
+                                                                    The IEEE SIGHT group of IIT Mandi organised an executive committee meeting to discuss the current and further plans of the group. The agenda of the meet being:<br> 1. Get familiarised
+                                                                    with the newly appointed committee members.<br> 2. To address all the simple ideas of members that could help the community around the campus and the needy in general.<br> 3. To discuss
+                                                                    plan of action and design a timeline of events and plans for the upcoming year.<br> 4. Plan for initiatives that could help benefit the institute environment.<br>
 
                                                                 </p>
                                                             </div>
@@ -380,20 +423,10 @@
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
                                                                     IEEE Student Branch IIT Mandi in collaboration with
-                                                                    <b>Programming Club IIT Mandi</b> organised a three
-                                                                    days long Hackathon- “Frosthack”.
-                                                                    This event was organised to solve social problems by
-                                                                    collaborating among students using technology.
-                                                                    Frosthack was a team event consisting of up to 3
-                                                                    members in each team which was conducted on
-                                                                    Devfolio. The participation was from top
-                                                                    universities and schools across India. The
-                                                                    participants ranged from 15 to 25 years old. Over
-                                                                    1500 applications have been submitted for
-                                                                    consideration. Over 1000 people registered for the
-                                                                    event. Over 300 proposals were submitted.
-                                                                    FrostHack's Discord Server has over 1200 users, and
-                                                                    the cash prize was worth 1.5 lakhs.
+                                                                    <b>Programming Club IIT Mandi</b> organised a three days long Hackathon- “Frosthack”. This event was organised to solve social problems by collaborating among students using technology.
+                                                                    Frosthack was a team event consisting of up to 3 members in each team which was conducted on Devfolio. The participation was from top universities and schools across India. The participants
+                                                                    ranged from 15 to 25 years old. Over 1500 applications have been submitted for consideration. Over 1000 people registered for the event. Over 300 proposals were submitted. FrostHack's
+                                                                    Discord Server has over 1200 users, and the cash prize was worth 1.5 lakhs.
                                                                 </p>
                                                             </div>
 
@@ -414,9 +447,7 @@
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
                                                                     This event was organised in conjunction with <b>IEEE
-                                                                        Day 2021</b>. The event's aim was to inspire
-                                                                    students to apply their abilities and come up with
-                                                                    creative and realistic solutions to meet the <b>17
+                                                                        Day 2021</b>. The event's aim was to inspire students to apply their abilities and come up with creative and realistic solutions to meet the <b>17
                                                                         United Nations Sustainable Development
                                                                         Goals</b>. It was held on October 2nd and 3rd.
                                                                 </p>
@@ -439,11 +470,8 @@
                                                             <div class="text-muted" style="margin: 10px;">
                                                                 <p class="mb-0">
                                                                     This was a two-day event held as part of the<b> IEEE
-                                                                        Day celebrations in 2021</b>. The event's
-                                                                    premise was to introduce participants to new job
-                                                                    prospects inside IEEE.
-                                                                    This event was conducted on the 9th and 10th of
-                                                                    October and featured four eminent speakers.
+                                                                        Day celebrations in 2021</b>. The event's premise was to introduce participants to new job prospects inside IEEE. This event was conducted on the 9th and 10th of October and featured
+                                                                    four eminent speakers.
 
                                                                 </p>
                                                             </div>
@@ -526,36 +554,25 @@
     <div class="container-fluid footer">
         <div class=row>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-                <p id="util" style="padding-bottom:10px;"><a href="http://www.ieee.org/index.html" id="u-home">Home</a>
-                    &#160;|&#160; <a href="http://www.ieee.org/sitemap.html" id="u-home">Sitemap/More Sites</a>
-                    &#160;|&#160; <a href="http://www.ieee.org/about/contact_center/index.html"
-                        id="u-contact">Contact</a>
-                    &#160;|&#160;
-                    <a href="http://www.ieee.org/accessibility_statement.html" id="u-accessibility">Accessibility</a>
-                    &#160;|&#160; <a href="http://www.ieee.org/p9-26.html" id="u-non">Nondiscrimination Policy</a>
-                    &#160;|&#160;
-                    <a href="http://ieee-ethics-reporting.org/" id="u-ethics-reporting">IEEE Ethics Reporting</a>
-                    &#160;|&#160;
-                    <a href="http://www.ieee.org/security_privacy.html" id="u-privacy">IEEE Privacy Policy</a>
-                    &#160;|&#160;
+                <p id="util" style="padding-bottom:10px;"><a href="http://www.ieee.org/index.html" id="u-home">Home</a> &#160;|&#160; <a href="http://www.ieee.org/sitemap.html" id="u-home">Sitemap/More Sites</a> &#160;|&#160; <a href="http://www.ieee.org/about/contact_center/index.html" id="u-contact">Contact</a>                    &#160;|&#160;
+                    <a href="http://www.ieee.org/accessibility_statement.html" id="u-accessibility">Accessibility</a> &#160;|&#160; <a href="http://www.ieee.org/p9-26.html" id="u-non">Nondiscrimination Policy</a> &#160;|&#160;
+                    <a href="http://ieee-ethics-reporting.org/" id="u-ethics-reporting">IEEE Ethics Reporting</a> &#160;|&#160;
+                    <a href="http://www.ieee.org/security_privacy.html" id="u-privacy">IEEE Privacy Policy</a> &#160;|&#160;
                     <a href="https://www.ieee.org/about/help/site-terms-conditions.html" id="u-terms">Terms</a>
                 </p>
             </div>
             <div class="container_img" style="padding-top: 18px;">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-                    <a id="util" href="https://www.ieee.org/" target="_blank"> <img src="img/ieee mb white png.png"
-                            width="50%"></a>
+                    <a id="util" href="https://www.ieee.org/" target="_blank"> <img src="img/ieee mb white png.png" width="50%"></a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <p id="util" style=" font-size:15px; padding-bottom: 5px; ">&copy; Copyright
-                    <script type="text/javascript">document.write((new Date()).getFullYear());</script> IEEE - All
-                    rights
-                    reserved. A not-for-profit organization, IEEE is the world's largest technical professional
-                    organization
-                    dedicated to advancing technology for the benefit of humanity.</span><br>
+                    <script type="text/javascript">
+                        document.write((new Date()).getFullYear());
+                    </script> IEEE - All rights reserved. A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.</span><br>
 
                 </p>
             </div>
@@ -567,20 +584,20 @@
                 font-family: Open Sans !important;
                 font-size: 15px !important;
             }
-
+            
             #util {
                 color: rgb(255, 254, 254);
                 text-align: center;
                 padding: 18px;
             }
-
+            
             #util a:link,
             #util a:visited,
             #util a:active {
                 color: rgb(255, 255, 255);
                 text-decoration: none;
             }
-
+            
             #util a:hover {
                 color: rgb(255, 255, 255);
                 text-decoration: underline;
@@ -609,21 +626,27 @@
         })
     </script>
     <script>
-        jQuery(document).ready(function () {
+        jQuery(document).ready(function() {
             if ($(window).width() < 999) {
                 $('#events-drop-down').removeClass('drop-down');
             }
         });
     </script>
-
+    <script>
+        jQuery(document).ready(function() {
+            if ($(window).width() < 999) {
+                $('#events-drop-down').removeClass('drop-down');
+            }
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('li.drop-down').click(function () {
+        $(document).ready(function() {
+            $('li.drop-down').click(function() {
                 $('li.drop-down').not(this).find('ul').hide();
                 $(this).find('ul').toggle();
             });
-        });  
+        });
     </script>
 
 </body>
