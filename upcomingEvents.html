@@ -66,10 +66,10 @@
 
     .content .upevents .card {
         overflow: hidden;
-        display: block;
+        display: flex;
         flex-direction: column;
         width: 20em;
-        height: 25em;
+        height: 27em;
         box-sizing: border-box;
         border-radius: 1em;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -90,7 +90,7 @@
     .content .upevents .card .info {
         text-align: center;
         justify-content: center;
-        display: flex;
+        display: inline-block;
         flex-direction: column;
 
     }
@@ -98,15 +98,11 @@
     .content .upevents .card .info .name {
         font-size: 1.2em;
         padding: 1em;
-        height: 4em;
         text-transform: uppercase;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
     }
 
-    .content .upevents .card .info p {
-        line-height: 32px;
-    }
     @media (max-width:450px){
         .container .content{
             padding-top: 60px;
@@ -285,11 +281,11 @@
                 <div class="card">
                     <div class="imgbx"><img src="img/upeve.webp" alt=""></div>
                     <div class="info"  style="color: black;">
-                        <div class="name">Talk on how to manage conflicts at workplace</div><br><br>
+                        <div class="name">Talk on how to manage conflicts at workplace</div>
                         <p>
-                            <div class="row" style="padding-top: 30px;">
+                            <div class="row">
                                 <div class="col-lg-6"><i class="fa fa-calendar" aria-hidden="true" style="color: #404040;"></i>&nbsp&nbsp2nd May</div>
-                                 <div class="col"><i class="fa fa-clock" aria-hidden="true" style="color: #404040;"></i>&nbsp&nbsp6:30 PM</div>
+                                <div class="col"><i class="fa fa-clock" aria-hidden="true" style="color: #404040;"></i>&nbsp&nbsp6:30 PM</div>
                             </div>
                         </p>
                     </div>
