@@ -569,3 +569,6 @@ canvas[resize] {
 #ul-drop-down{
 	list-style: none;
 }
+hr{
+	background-color: #000;
+}
